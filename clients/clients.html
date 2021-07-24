@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Cadastros - Gama Shoe Store</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <script type="text/javascript" src="/clients/clients.js"></script>
+  </head>
+  <body page="list">
+    <img src="/assets/logo.png" />
+    <h1>Clientes</h1>
+    <div id="registerList">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Cidade</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="bodyList"></tbody>
+      </table>
+
+      <div class="btn-center">
+        <button onclick="showPage('register', true)">Novo cliente</button>
+        <a href="/index.html"><button>Voltar</button></a>
+      </div>
+    </div>
+
+    <form id="registerArea">
+      <div class="label">
+        <div>ID</div>
+        <div>
+          <input
+            type="number"
+            readonly
+            id="id"
+            placeholder="Será gerado automaticamente"
+          />
+        </div>
+        <div>Nome</div>
+        <div>
+          <input id="name" type="text" />
+        </div>
+        <div>Telefone</div>
+        <div>
+          <input id="phone" type="tel" />
+        </div>
+        <div>Email</div>
+        <div>
+          <input id="email" type="email" />
+        </div>
+        <div>Cidade</div>
+        <div>
+          <input id="city" type="text" />
+        </div>
+      </div>
+
+      <div class="btn-center">
+        <button>Salvar</button>
+        <button type="button" onclick="showPage('list')" id="gray">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </body>
+</html>

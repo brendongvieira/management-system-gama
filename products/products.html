@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Cadastros - Gama Shoe Store</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <script type="text/javascript" src="/products/products.js"></script>
+  </head>
+  <body page="list">
+    <img src="/assets/logo.png" />
+    <h1>Produtos</h1>
+    <div id="registerList">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="bodyList"></tbody>
+      </table>
+
+      <div class="btn-center">
+        <button onclick="showPage('register', true)">Novo Produto</button>
+        <a href="/index.html"><button>Voltar</button></a>
+      </div>
+    </div>
+
+    <form id="registerArea">
+      <div class="label">
+        <div>ID</div>
+        <div>
+          <input
+            type="number"
+            readonly
+            id="id"
+            placeholder="Será gerado automaticamente..."
+          />
+        </div>
+        <div>Produto</div>
+        <div>
+          <input id="name" type="text" />
+        </div>
+        <div>Quantidade</div>
+        <div>
+          <input id="quantity" type="number" />
+        </div>
+        <div>Preço</div>
+        <div>
+          <input id="price" type="number" />
+        </div>
+      </div>
+
+      <div class="btn-center">
+        <button>Salvar</button>
+        <button type="button" onclick="showPage('list')" id="gray">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
